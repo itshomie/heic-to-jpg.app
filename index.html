@@ -12,10 +12,10 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HEIC to JPG Converter - Free Online HEIC to JPG | heic-to-jpg.app</title>
+    <title>HEIC to JPG Converter Online - Free, Private, Batch | heic-to-jpg.app</title>
     <meta
       name="description"
-      content="Convert HEIC to JPG in your browser. A free private converter for iPhone HEIC photos with adjustable JPG quality and batch downloads."
+      content="Convert HEIC to JPG online for free. Turn iPhone HEIC photos into JPG locally in your browser with batch upload, quality control, and ZIP downloads."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://heic-to-jpg.app/" />
@@ -51,7 +51,14 @@
           "price": "0",
           "priceCurrency": "USD"
         },
-        "description": "Convert iPhone HEIC photos to JPG in your browser with adjustable quality and batch downloads."
+        "description": "Convert iPhone HEIC photos to JPG locally in your browser with adjustable quality and batch downloads.",
+        "featureList": [
+          "HEIC to JPG conversion",
+          "Batch HEIC upload",
+          "Local browser processing",
+          "Adjustable JPG quality",
+          "ZIP download"
+        ]
       }
     </script>
     <script type="application/ld+json">
@@ -139,6 +146,22 @@
           },
           {
             "@type": "Question",
+            "name": "Can I use this HEIC to JPG converter on Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The converter works in modern Windows browsers such as Chrome, Edge, and Firefox, so you can turn iPhone HEIC photos into JPG without installing a desktop app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What JPG quality setting should I use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use around 85 to 90 percent for forms, email, and everyday sharing. Use a higher setting when you plan to print, archive, or edit the JPG later."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Does the JPG keep the original photo metadata?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -156,6 +179,7 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="/#how-it-works">How it works</a>
+        <a href="/guides/">Guides</a>
         <a href="/#faq">FAQ</a>
         <a href="/privacy/">Privacy</a>
         <a href="/about/">About</a>
@@ -165,10 +189,10 @@
     <main>
       <section class="hero-section" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <h1 id="hero-title">HEIC to JPG Converter</h1>
+          <h1 id="hero-title">Convert HEIC to JPG Online</h1>
           <p>
-            Turn iPhone HEIC photos into JPG files that work almost anywhere. The conversion happens
-            in your browser, so your originals do not need to be uploaded.
+            Drop in iPhone HEIC photos and get compatible JPG files in seconds. The converter runs
+            locally in your browser, so your originals stay on your device.
           </p>
           <div class="hero-actions" aria-label="Converter actions">
             <button class="button primary" type="button" id="heroChoose">
@@ -180,9 +204,36 @@
               Try sample
             </button>
           </div>
+          <ul class="proof-strip" aria-label="HEIC to JPG converter highlights">
+            <li>
+              <i data-lucide="lock-keyhole" aria-hidden="true"></i>
+              <strong>No upload</strong>
+              <span>Private browser conversion</span>
+            </li>
+            <li>
+              <i data-lucide="image" aria-hidden="true"></i>
+              <strong>Batch ready</strong>
+              <span>Convert multiple HEIC files</span>
+            </li>
+            <li>
+              <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
+              <strong>Quality control</strong>
+              <span>Choose smaller or sharper JPGs</span>
+            </li>
+            <li>
+              <i data-lucide="archive" aria-hidden="true"></i>
+              <strong>ZIP download</strong>
+              <span>Save the whole batch together</span>
+            </li>
+          </ul>
         </div>
 
         <section class="converter-shell" aria-label="HEIC to JPG converter">
+          <div class="converter-topline">
+            <span><i data-lucide="shield-check" aria-hidden="true"></i> Files stay on your device</span>
+            <span><i data-lucide="zap" aria-hidden="true"></i> No signup, no queue</span>
+            <span><i data-lucide="download" aria-hidden="true"></i> JPG, PNG, or PDF output</span>
+          </div>
           <div class="converter-grid">
             <div class="upload-column">
               <h2>1. Add HEIC files</h2>
@@ -287,7 +338,10 @@
       </section>
 
       <section class="steps-section" id="how-it-works" aria-labelledby="steps-title">
-        <h2 id="steps-title">How to convert HEIC to JPG</h2>
+        <div class="section-header">
+          <h2 id="steps-title">How to convert HEIC to JPG</h2>
+          <p>When a site or app rejects HEIC, the fastest fix is a compatible JPG copy you can download immediately.</p>
+        </div>
         <div class="step-list">
           <article class="step-card">
             <span class="step-number">1</span>
@@ -316,92 +370,121 @@
         </div>
       </section>
 
-      <section class="benefits-section" aria-labelledby="benefits-title">
-        <h2 id="benefits-title">Why use <span>heic-to-jpg.app</span></h2>
-        <div class="benefit-list">
-          <article class="benefit-item">
-            <i data-lucide="shield-check" aria-hidden="true"></i>
-            <div>
-              <h3>100% Private</h3>
-              <p>The converter runs client-side. We do not receive the photos you choose or the JPGs you create.</p>
-            </div>
+      <section class="privacy-flow" aria-labelledby="privacy-flow-title">
+        <div class="flow-copy">
+          <h2 id="privacy-flow-title">Your photos do not travel to a server</h2>
+          <p>
+            HEIC files often contain family photos, receipts, screenshots, documents, and location
+            context. This converter reads the file in the page, creates a new JPG copy locally, and
+            lets your browser save the result.
+          </p>
+        </div>
+        <ol class="flow-track" aria-label="Private conversion flow">
+          <li>
+            <span>1</span>
+            <strong>Choose HEIC</strong>
+            <p>The browser gets permission only for the files you select.</p>
+          </li>
+          <li>
+            <span>2</span>
+            <strong>Convert locally</strong>
+            <p>Image decoding and JPG export happen on your device.</p>
+          </li>
+          <li>
+            <span>3</span>
+            <strong>Download JPG</strong>
+            <p>Your browser saves individual files or one ZIP archive.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="use-cases-section" id="use-cases" aria-labelledby="use-cases-title">
+        <div class="section-header">
+          <h2 id="use-cases-title">Built for the moments HEIC gets in the way</h2>
+          <p>JPG is still the safest output when a website, app, or person just needs a file that opens everywhere.</p>
+        </div>
+        <div class="use-case-grid">
+          <article>
+            <i data-lucide="folder-open" aria-hidden="true"></i>
+            <h3>Windows and shared PCs</h3>
+            <p>Turn iPhone photos into JPG files that open in browsers, email clients, and older photo tools.</p>
           </article>
-          <article class="benefit-item">
-            <i data-lucide="zap" aria-hidden="true"></i>
-            <div>
-              <h3>Fast &amp; Efficient</h3>
-              <p>No account, queue, or email step. It is meant for the small format problem you hit in the middle of work.</p>
-            </div>
+          <article>
+            <i data-lucide="check-circle-2" aria-hidden="true"></i>
+            <h3>Forms and ID uploads</h3>
+            <p>Use JPG when a portal rejects HEIC or asks for a common image type under a file-size limit.</p>
           </article>
-          <article class="benefit-item">
+          <article>
             <i data-lucide="image" aria-hidden="true"></i>
-            <div>
-              <h3>High Quality</h3>
-              <p>Keep detail for print or reduce size for forms, support tickets, email, and web uploads.</p>
-            </div>
+            <h3>Product photos</h3>
+            <p>Prepare marketplace and listing images without changing the original HEIC files in your library.</p>
+          </article>
+          <article>
+            <i data-lucide="archive" aria-hidden="true"></i>
+            <h3>Large batches</h3>
+            <p>Select several HEIC files, convert them together, then download all JPG copies as one ZIP.</p>
           </article>
         </div>
       </section>
 
-      <section class="seo-section" aria-labelledby="seo-title">
-        <div>
-          <h2 id="seo-title">Why people still need JPG copies</h2>
-          <p>
-            HEIC is a good camera format, especially on iPhone, because it keeps image files small.
-            The problem usually appears later: a government form rejects the upload, an older editor
-            cannot open the file, or a marketplace asks for JPG. This page is built for that moment:
-            make a compatible JPG copy and keep the original HEIC file untouched.
-          </p>
-        </div>
-        <div>
-          <h2>What happens during conversion</h2>
-          <p>
-            The converter reads the HEIC image in your browser, draws it into a local image canvas,
-            and exports a new JPG file using the quality setting you choose. Because JPG does not keep
-            every HEIC feature, metadata such as Live Photo data, depth information, and some camera
-            details may not be preserved in the exported file.
-          </p>
-        </div>
-      </section>
-
-      <section class="guide-section" aria-labelledby="guide-title">
+      <section class="format-section" aria-labelledby="format-title">
         <div class="guide-intro">
-          <h2 id="guide-title">A practical HEIC to JPG guide</h2>
+          <h2 id="format-title">Choose the right output and quality</h2>
           <p>
-            Most conversions are straightforward, but the right setting depends on where the image is
-            going. These notes are written for normal photo workflows rather than lab-perfect image
-            processing.
+            Most HEIC to JPG searches are compatibility problems, but the best setting depends on
+            where the image is going.
           </p>
         </div>
-        <div class="guide-grid">
+        <div class="format-matrix">
           <article>
-            <h3>For forms and ID uploads</h3>
-            <p>
-              Use JPG quality around 85-90%. It usually keeps text, faces, and document edges readable
-              while avoiding oversized files that upload forms may reject.
-            </p>
+            <strong>JPG, 85-90%</strong>
+            <span>Best for forms, email, support tickets, social sharing, and most websites.</span>
           </article>
           <article>
-            <h3>For family photos and printing</h3>
-            <p>
-              Keep quality near 95-100% if the photo will be edited again or printed. The file will be
-              larger, but it leaves more detail in skies, skin tones, and shadows.
-            </p>
+            <strong>JPG, 95-100%</strong>
+            <span>Use for printing, archiving, or editing later. Files will be larger.</span>
           </article>
           <article>
-            <h3>For email and support tickets</h3>
-            <p>
-              A lower quality setting can be fine when the goal is simply to show what happened. Check
-              the preview and download one file first if the photo contains small text.
-            </p>
+            <strong>PNG</strong>
+            <span>Useful when you want a lossless image copy and file size is less important.</span>
           </article>
           <article>
-            <h3>For batches from iPhone</h3>
-            <p>
-              Select multiple HEIC files at once, let the results finish, then use “Download all as
-              ZIP” so the browser saves the JPG copies together.
-            </p>
+            <strong>PDF</strong>
+            <span>Use when a document portal wants a PDF instead of an image upload.</span>
           </article>
+        </div>
+        <div class="compatibility-note">
+          <h3>What changes when HEIC becomes JPG?</h3>
+          <p>
+            JPG is widely compatible, but it does not keep every HEIC feature. Live Photo data, depth
+            information, and some camera metadata may not appear in the exported file, so keep your
+            original HEIC photos if those details matter.
+          </p>
+        </div>
+      </section>
+
+      <section class="guides-preview-section" aria-labelledby="guides-preview-title">
+        <div class="section-header">
+          <h2 id="guides-preview-title">HEIC to JPG guides</h2>
+          <p>Short practical pages for the related questions people usually have before or after converting.</p>
+        </div>
+        <div class="guide-link-grid">
+          <a href="/guides/iphone-heic-to-jpg/">
+            <strong>iPhone HEIC to JPG</strong>
+            <span>Why iPhones save HEIC and the fastest way to make JPG copies.</span>
+          </a>
+          <a href="/guides/heic-to-jpg-windows/">
+            <strong>HEIC to JPG on Windows</strong>
+            <span>Make iPhone photos easier to open, upload, and share from a Windows PC.</span>
+          </a>
+          <a href="/guides/batch-heic-to-jpg/">
+            <strong>Batch convert HEIC files</strong>
+            <span>How to handle multiple HEIC photos and download them together.</span>
+          </a>
+          <a href="/guides/heic-vs-jpg/">
+            <strong>HEIC vs JPG</strong>
+            <span>When to keep HEIC, when to export JPG, and what can change.</span>
+          </a>
         </div>
       </section>
 
@@ -449,6 +532,20 @@
             </p>
           </details>
           <details>
+            <summary>Can I use this HEIC to JPG converter on Windows?</summary>
+            <p>
+              Yes. Use a modern Windows browser such as Chrome, Edge, or Firefox. This is useful when
+              an iPhone photo opens on Apple devices but needs to become JPG for a Windows workflow.
+            </p>
+          </details>
+          <details>
+            <summary>What JPG quality setting should I use?</summary>
+            <p>
+              Use 85-90% for forms, email, and everyday sharing. Move closer to 100% for printing,
+              archiving, or editing, and lower the setting when a website has a strict upload limit.
+            </p>
+          </details>
+          <details>
             <summary>Does the JPG keep the original photo metadata?</summary>
             <p>
               The exported JPG focuses on image compatibility. Some metadata and HEIC-specific
@@ -469,6 +566,7 @@
       <div>
         <h2>Links</h2>
         <a href="/#how-it-works">How it works</a>
+        <a href="/guides/">Guides</a>
         <a href="/#faq">FAQ</a>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
