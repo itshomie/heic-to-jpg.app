@@ -274,20 +274,20 @@ function initConverter() {
   }
 
   async function convertFileToOutput(file, outputFormat) {
-    const heic2any = await getHeicConverter();
+    const { heicTo } = await getHeicConverter();
     const config = formatConfig[outputFormat];
     const imageType = outputFormat === 'png' ? 'image/png' : 'image/jpeg';
-    const options = {
-      blob: file,
-      toType: imageType,
-    };
+    const options = { blob: file, type: imageType };
 
     if (imageType === 'image/jpeg') {
       options.quality = state.quality;
     }
 
-    const output = await heic2any(options);
-    const imageBlob = Array.isArray(output) ? output[0] : output;
+    const imageBlob = await heicTo(options);
+
+    if (!(imageBlob instanceof Blob)) {
+      throw new Error('The HEIC converter did not return an image file.');
+    }
 
     if (outputFormat !== 'pdf') {
       return {
@@ -543,11 +543,28 @@ function initConverter() {
     if (error instanceof Error && error.message) {
       return error.message;
     }
+
+    if (typeof error === 'string' && error) {
+      return error.replace(/^Error:\s*/i, '');
+    }
+
+    if (error && typeof error === 'object') {
+      if ('message' in error && error.message) {
+        return String(error.message).replace(/^Error:\s*/i, '');
+      }
+
+      try {
+        return JSON.stringify(error);
+      } catch {
+        return String(error);
+      }
+    }
+
     return 'This browser could not read the HEIC file.';
   }
 
   async function getHeicConverter() {
-    heicConverterPromise ??= import('heic2any').then((module) => module.default || module);
+    heicConverterPromise ??= import('heic-to');
     return heicConverterPromise;
   }
 
