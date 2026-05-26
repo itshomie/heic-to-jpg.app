@@ -79,7 +79,7 @@ if (converterRoot) {
 function initConverter() {
   const state = {
     quality: 0.9,
-    outputFormat: 'jpg',
+    outputFormat: getInitialOutputFormat(),
     items: [],
   };
 
@@ -114,7 +114,9 @@ function initConverter() {
     ['#2fa36b', '#91d3d6', '#184f73'],
   ];
 
+  elements.formatSelect.value = state.outputFormat;
   updateFormatUi();
+  renderResults();
 
   elements.heroChoose.addEventListener('click', () => elements.fileInput.click());
   elements.fileInput.addEventListener('change', (event) => {
@@ -274,20 +276,14 @@ function initConverter() {
   }
 
   async function convertFileToOutput(file, outputFormat) {
-    const heic2any = await getHeicConverter();
+    const heicTo = await getHeicConverter();
     const config = formatConfig[outputFormat];
     const imageType = outputFormat === 'png' ? 'image/png' : 'image/jpeg';
-    const options = {
+    const imageBlob = await heicTo({
       blob: file,
-      toType: imageType,
-    };
-
-    if (imageType === 'image/jpeg') {
-      options.quality = state.quality;
-    }
-
-    const output = await heic2any(options);
-    const imageBlob = Array.isArray(output) ? output[0] : output;
+      type: imageType,
+      quality: state.quality,
+    });
 
     if (outputFormat !== 'pdf') {
       return {
@@ -547,7 +543,7 @@ function initConverter() {
   }
 
   async function getHeicConverter() {
-    heicConverterPromise ??= import('heic2any').then((module) => module.default || module);
+    heicConverterPromise ??= import('heic-to').then((module) => module.heicTo);
     return heicConverterPromise;
   }
 
@@ -563,6 +559,11 @@ function initConverter() {
 
   function getFormatConfig() {
     return formatConfig[state.outputFormat] || formatConfig.jpg;
+  }
+
+  function getInitialOutputFormat() {
+    const format = new URLSearchParams(window.location.search).get('format')?.toLowerCase();
+    return format && formatConfig[format] ? format : 'jpg';
   }
 
   function escapeHtml(value) {
