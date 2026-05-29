@@ -69,11 +69,21 @@ const formatConfig = {
 };
 
 createIcons({ icons });
+initEmailLinks();
 
 const converterRoot = document.querySelector('.converter-shell');
 
 if (converterRoot) {
   initConverter();
+}
+
+function initEmailLinks() {
+  document.querySelectorAll('[data-email-user][data-email-domain][data-email-tld]').forEach((link) => {
+    const email = `${link.dataset.emailUser}@${link.dataset.emailDomain}.${link.dataset.emailTld}`;
+    link.textContent = email;
+    link.setAttribute('href', `mailto:${email}`);
+    link.setAttribute('aria-label', `Email ${email}`);
+  });
 }
 
 function initConverter() {
