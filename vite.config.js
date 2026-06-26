@@ -11,6 +11,8 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact/index.html'),
         guides: resolve(__dirname, 'guides/index.html'),
         batchHeicToJpg: resolve(__dirname, 'guides/batch-heic-to-jpg/index.html'),
+        convertHeicToJpg: resolve(__dirname, 'guides/convert-heic-to-jpg/index.html'),
+        heicToJpeg: resolve(__dirname, 'guides/heic-to-jpeg/index.html'),
         heicToJpgWindows: resolve(__dirname, 'guides/heic-to-jpg-windows/index.html'),
         heicVsJpg: resolve(__dirname, 'guides/heic-vs-jpg/index.html'),
         iphoneHeicToJpg: resolve(__dirname, 'guides/iphone-heic-to-jpg/index.html'),
